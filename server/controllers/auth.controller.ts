@@ -17,7 +17,16 @@ expiresIn: 60 * 60 * 24 // Asiganmos expiración del token en 24h (60s * 60m * 2
 })
 
 return res.json({
-    token
+    token,
+    message: "Token has been created!"
 })
 
+}
+
+export const profileHandler = (req: Request, res: Response) => {
+    return res.json({
+        profile: req.user,
+        message: "profile data loaded!"
+        
+    })
 }
